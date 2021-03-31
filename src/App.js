@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
 import Particles from "react-particles-js";
+import { Main } from "./pages/main/main";
 const PARTICLES_PARAMS = {
   particles: {
     number: {
-      value: 100,
+      value: 150,
     },
     size: {
       value: 6,
@@ -16,14 +17,15 @@ const PARTICLES_PARAMS = {
         enable: true,
         mode: "repulse",
       },
+      resize: true,
     },
   },
 };
 function App() {
   return (
     <div className="App">
-      hey
-      <Particles params={PARTICLES_PARAMS} />
+      <Main />
+      <Particles params={PARTICLES_PARAMS} className="particles" />
     </div>
   );
 }
